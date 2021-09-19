@@ -1,0 +1,82 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+int main()
+
+{
+
+  int a[3][3],i,j,suml=0,sumr=0;
+
+  int *ptr[3][3];
+
+  for(i=0;i<3;i++)
+
+  {
+
+  	for(j=0;j<3;j++)  
+    {
+
+  		printf("\n ENTER THE NUMBER [%d][%d]:",i,j);
+
+  		scanf("%d",&a[i][j]);
+
+  		
+
+	  }
+
+  }
+
+  printf("MATRIX IS......\n");
+
+  for(i=0;i<3;i++)
+
+  {
+
+  	for(j=0;j<3;j++)
+
+  	{
+
+  		printf("%5d",a[i][j]);
+
+	  }
+
+	    printf("\n");
+
+  }
+
+for(i=0;i<3;i++)
+
+    {
+
+        for(j=0;j<3;j++)
+
+        {
+
+            if(i==j)
+
+            {
+
+                suml=suml+a[i][j];
+
+            }
+
+            if(i+j==3-1)
+
+            {
+
+            	sumr=sumr+a[i][j];
+
+			}
+
+        }
+
+    }
+
+ 
+
+    printf("The sum of left diagonal elements matrix is  = %d\n",suml);
+
+    printf("\n The sum of the right diagonal elements of the matrix is=%d",sumr);
+
+}
